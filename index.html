@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREIEUROPA</title>
+</head>
+<body style="background:#1a1a1a; color:white; text-align:center; font-family: Manrope, sans-serif;">
+
+<h1 style="color:#d4af37;">FREIEUROPA</h1>
+<p>Bienvenido a FREIEUROPA, primo.</p>
+
+<div id="selector-idiomas" style="text-align:center; margin:20px;">
+<button onclick="abrirIdiomas()" style="background: linear-gradient(135deg, #d4af37, #f6e27a); padding: 12px 20px; border-radius: 25px; font-weight: bold; border:none; cursor:pointer;">
+🌍 Elige 1 idioma
+</button>
+<div id="lista-idiomas" style="display:none; margin-top:12px;"></div>
+<p id="idioma-elegido" style="font-weight:bold; color:#d4af37;"></p>
+<div id="contenido-idioma"></div>
+</div>
+
+<script>
+var nombres = {
+'de':'Alemán', 'nl':'Holandés', 'fr':'Francés', 'it':'Italiano',
+'en':'Inglés', 'es':'Español', 'pt':'Portugués', 'ro':'Rumano',
+'pl':'Polaco', 'tr':'Turco', 'ca':'Catalán'
+};
+var lista = document.getElementById('lista-idiomas');
+var numero = 1;
+for (var codigo in nombres) {
+var b = document.createElement('button');
+b.innerText = numero + '. ' + nombres[codigo];
+b.onclick = (function(c, n){ return function(){ elegirIdioma(c, n); }; })(codigo, nombres[codigo]);
+b.style.margin = '4px';
+lista.appendChild(b);
+numero++;
+}
+function abrirIdiomas(){
+lista.style.display = lista.style.display === 'none' ? 'block' : 'none';
+}
+function elegirIdioma(codigo, nombre){
+lista.innerHTML = '';
+lista.style.display = 'none';
+document.getElementById('idioma-elegido').innerText = 'Te quedaste con: ' + nombre + '. Los otros 10 nunca se cargaron, no pesan.';
+document.getElementById('contenido-idioma').innerText = 'Cargando solo idioma: ' + codigo + '... Aqui va solo ese idioma, primo.';
+}
+</script>
+
+</body>
+</html>
