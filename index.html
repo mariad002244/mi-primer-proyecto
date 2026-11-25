@@ -20,6 +20,26 @@
 </div>
 
 <script>
+const PAISES = [
+  { pais: "España", codigo: "+34", localidades: ["Andalucía","Aragón","Asturias","Baleares","Canarias","Cantabria","Castilla-La Mancha","Castilla y León","Cataluña","Extremadura","Galicia","Madrid","Murcia","Navarra","País Vasco","La Rioja","Valencia","Ceuta","Melilla"] },
+  { pais: "Francia", codigo: "+33", localidades: ["Metropolitana","Córcega"] },
+  { pais: "Francia-Guadalupe", codigo: "+590", localidades: ["Guadalupe","San Bartolomé","San Martín"] },
+  { pais: "Francia-Martinica", codigo: "+596", localidades: ["Martinica"] },
+  { pais: "Francia-Guyana", codigo: "+594", localidades: ["Guyana Francesa"] },
+  { pais: "Francia-Reunión", codigo: "+262", localidades: ["Reunión","Mayotte"] },
+  { pais: "Francia-Pacífico", codigo: "+687", localidades: ["Nueva Caledonia"] },
+  { pais: "Francia-Polinesia", codigo: "+689", localidades: ["Polinesia Francesa"] },
+  { pais: "Portugal", codigo: "+351", localidades: ["Continental","Azores","Madeira"] },
+  { pais: "Italia", codigo: "+39", localidades: ["Sicilia","Cerdeña","Continental"] },
+  { pais: "Alemania", codigo: "+49", localidades: ["Continental"] },
+  { pais: "Suiza", codigo: "+41", localidades: ["Continental"] },
+  { pais: "Austria", codigo: "+43", localidades: ["Continental"] },
+  { pais: "Holanda", codigo: "+31", localidades: ["Continental"] },
+  { pais: "Holanda-Caribe", codigo: "+599", localidades: ["Curazao","Bonaire"] },
+  { pais: "Holanda-Aruba", codigo: "+297", localidades: ["Aruba"] },
+  { pais: "Holanda-Sint Maarten", codigo: "+721", localidades: ["Sint Maarten"] },
+];
+
 var nombres = {
 'de':'Alemán', 'nl':'Holandés', 'fr':'Francés', 'it':'Italiano',
 'en':'Inglés', 'es':'Español', 'pt':'Portugués', 'ro':'Rumano',
